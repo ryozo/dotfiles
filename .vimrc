@@ -1,0 +1,53 @@
+" 表示系設定
+set number		" 行番号の表示
+set title		" ターミナルのタイトルをセット
+set cursorline		" カーソル行に背景色をつける
+set cursorcolumn	" カーソル位置のカラムの背景色を変更
+set showmatch		" 対応する括弧を強調表示
+set matchtime=5		" 対応する括弧をより素早く表示
+"set list		" 不可視文字を表示
+set ruler		" ルーラーを表示
+
+" 検索系設定
+set hlsearch		" 検索文字列をハイライト表示
+set incsearch		" インクリメンタルサーチ
+set ignorecase		" 大小文字を区別しない
+set smartcase		" 大小文字を混在させた検索のみ大小文字を区別
+set gdefault 		" 置換時のgオプションをデフォルト有効に
+
+" その他の設定
+set autoread		" 外部でファイル変更された場合は読み直す
+set mouse=a		" マウス入力を受け付ける
+set history=10000	" コマンドラインの履歴保持
+set visualbell t_vb=	" ビープ音を無効
+set noerrorbells 	" エラー時もビープ音を無効
+
+" Powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+
+set laststatus=2 " Always display the statusline in all windows
+set showtabline=2 " Always display the tabline, even if there is only one tab
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+
+" NeoBundle
+if has('vim_starting')
+  set nocompatible
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+endif
+call neobundle#begin(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+"" NeoBundle Plugin start
+
+NeoBundle 'nanotech/jellybeans.vim'
+
+"" NeoBundle Plugin end
+NeoBundleCheck
+call neobundle#end()
+filetype plugin indent on
+
+set t_Co=256
+syntax on
+colorscheme jellybeans
