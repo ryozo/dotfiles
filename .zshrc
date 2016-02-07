@@ -11,6 +11,13 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+autoload -U compinit	# 補完機能
+autoload -U predict-on	# 先行予測機能
+setopt auto_cd 		# ディレクトリ名だけでcd
+setopt auto_pushd	# cdの度にpushd
+compinit		# 補完有効
+predict-on		# 先行予測機能
+
 ## powerline
 export PATH=$PATH:~/Library/Python/2.7/bin
 powerline-daemon -q
