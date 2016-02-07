@@ -22,3 +22,7 @@ predict-on		# 先行予測機能
 export PATH=$PATH:~/Library/Python/2.7/bin
 powerline-daemon -q
 . ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+
+## sdkman(gvm)
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
