@@ -18,8 +18,19 @@ setopt auto_pushd	# cdの度にpushd
 compinit		# 補完有効
 #predict-on		# 先行予測機能
 
+## dircolors
+if [ -n "$LS_COLORS" ]; then
+    zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+fi
+if [ -f ~/.dircolors ]; then
+    if type dircolors > /dev/null 2>&1; then
+        eval $(dircolors ~/.dircolors)
+    elif type gdircolors > /dev/null 2>&1; then
+        eval $(gdircolors ~/.dircolors)
+    fi
+fi
+
 ## powerline
-export PATH=$PATH:~/Library/Python/2.7/bin
 powerline-daemon -q
 . ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 
@@ -30,3 +41,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 ## github hub
 function git(){hub "$@"}
 
+## PATH
+export PATH=$PATH:/opt/maven/bin
+export PATH=$PATH:/opt/activator-dist/bin
+export PATH=$PATH:~/Library/Python/2.7/bin
