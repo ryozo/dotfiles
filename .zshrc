@@ -38,9 +38,6 @@ powerline-daemon -q
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-## github hub
-function git(){hub "$@"}
-
 ## PATH
 export PATH=$PATH:/opt/maven/bin
 export PATH=$PATH:/opt/activator-dist/bin
