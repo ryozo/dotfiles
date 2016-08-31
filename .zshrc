@@ -41,6 +41,10 @@ powerline-daemon -q
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+## Source-highlight
+export LESS='-R'
+export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
+
 ## PATH
 export PATH=$PATH:/opt/maven/bin
 export PATH=$PATH:/opt/activator-dist/bin
