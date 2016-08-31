@@ -10,6 +10,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Alias
+alias updatedb='sudo /usr/libexec/locate.updatedb'
+
 # Customize to your needs...
 autoload -U compinit	# 補完機能
 #autoload -U predict-on	# 先行予測機能
