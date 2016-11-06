@@ -42,6 +42,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "" NeoBundle Plugin start
 
 NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'kakkyz81/evervim'
 
 "" NeoBundle Plugin end
 NeoBundleCheck
