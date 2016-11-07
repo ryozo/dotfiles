@@ -21,6 +21,7 @@ set mouse=a		" マウス入力を受け付ける
 set history=10000	" コマンドラインの履歴保持
 set visualbell t_vb=	" ビープ音を無効
 set noerrorbells 	" エラー時もビープ音を無効
+set backspace=2		" Backspace定義 indent,eol,start
 
 " Powerline
 python from powerline.vim import setup as powerline_setup
