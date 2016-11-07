@@ -49,6 +49,9 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'kakkyz81/evervim'
+NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'tyru/open-browser.vim'
 
 "" NeoBundle Plugin end
 NeoBundleCheck
@@ -76,3 +79,7 @@ function! s:AutoMarkrement()
     execute 'mark' g:markrement_char[b:markrement_pos]
     echo 'marked' g:markrement_char[b:markrement_pos]
 endfunction
+
+"" Markdown Firefox Preview
+au BufRead,BufNewFile *.md set filetype=markdown
+let g:previm_open_cmd = 'open -a Firefox'
