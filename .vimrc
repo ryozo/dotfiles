@@ -49,6 +49,7 @@ NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'kakkyz81/evervim'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
@@ -84,3 +85,9 @@ endfunction
 "" Markdown Firefox Preview
 au BufRead,BufNewFile *.md set filetype=markdown
 let g:previm_open_cmd = 'open -a Firefox'
+
+"" Neocomplete vim settings
+if filereadable(expand('~/.neocomplete'))
+    source ~/.neocomplete
+endif
+
