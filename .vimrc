@@ -54,6 +54,7 @@ NeoBundle 'kakkyz81/evervim'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'easymotion/vim-easymotion'
 
 "" NeoBundle Plugin end
 NeoBundleCheck
@@ -91,3 +92,12 @@ if filereadable(expand('~/.neocomplete'))
     source ~/.neocomplete
 endif
 
+"" EasyMotion
+let g:EasyMotion_leader_key="<Space>"
+" ホームポジションに近いキーを使う
+let g:EasyMotion_keys='hjklasdfgyuiopqwertnmzxcv'
+" 1 ストローク選択を優先する
+let g:EasyMotion_grouping=1
+" カラー設定変更
+hi EasyMotionTarget ctermbg=none ctermfg=red
+hi EasyMotionShade  ctermbg=none ctermfg=blue
