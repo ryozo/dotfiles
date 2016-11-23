@@ -49,3 +49,6 @@ export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 export PATH=$PATH:/opt/maven/bin
 export PATH=$PATH:/opt/activator-dist/bin
 export PATH=$PATH:~/Library/Python/2.7/bin
+
+## CDPATH
+export CDPATH=.:~
