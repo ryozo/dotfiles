@@ -32,6 +32,11 @@ set laststatus=2 " Always display the statusline in all windows
 set showtabline=2 " Always display the tabline, even if there is only one tab
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
+" Keymap
+"" コマンド履歴利用時にカーソルキーを使わず、かつ履歴フィルタを有効にする
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
 python import markdown
 let g:evervim_devtoken=$EVERNOTE_TOKEN
 
