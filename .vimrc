@@ -36,6 +36,11 @@ set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusl
 "" コマンド履歴利用時にカーソルキーを使わず、かつ履歴フィルタを有効にする
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
+"" バッファリスト移動用 関連性があるコマンドなので[]でまとめる
+nnoremap <silent> [b :bprevious
+nnoremap <silent> ]b :bnext
+nnoremap <silent> [B :bfirxt
+nnoremap <silent> ]B :blast
 
 python import markdown
 let g:evervim_devtoken=$EVERNOTE_TOKEN
