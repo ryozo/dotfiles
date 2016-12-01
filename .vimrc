@@ -22,6 +22,7 @@ set history=10000	" コマンドラインの履歴保持
 set visualbell t_vb=	" ビープ音を無効
 set noerrorbells 	" エラー時もビープ音を無効
 set backspace=2		" Backspace定義 indent,eol,start
+set hidden		" バッファ移動時に変更分を自動的に隠しバッファに移動
 
 " Powerline
 python from powerline.vim import setup as powerline_setup
