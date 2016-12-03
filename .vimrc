@@ -34,10 +34,16 @@ set showtabline=2 " Always display the tabline, even if there is only one tab
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
 " Keymap
-"" コマンド履歴利用時にカーソルキーを使わず、かつ履歴フィルタを有効にする
+"" CommandLine Mode
+""" コマンド履歴利用時にカーソルキーを使わず、かつ履歴フィルタを有効にする
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
-"" バッファリスト移動用 関連性があるコマンドなので[]でまとめる
+""" アクティブなファイルが含まれているディレクトリを手早く展開
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
+
+"" Normal Mode
+""" バッファリスト移動用 関連性があるコマンドなので[]でまとめる
 nnoremap <silent> [b :bprevious
 nnoremap <silent> ]b :bnext
 nnoremap <silent> [B :bfirxt
