@@ -72,6 +72,7 @@ NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'easymotion/vim-easymotion'
+NeoBundle 'tpope/vim-surround'
 
 "" NeoBundle Plugin end
 NeoBundleCheck
