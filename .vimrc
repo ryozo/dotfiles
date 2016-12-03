@@ -23,6 +23,7 @@ set visualbell t_vb=	" ビープ音を無効
 set noerrorbells 	" エラー時もビープ音を無効
 set backspace=2		" Backspace定義 indent,eol,start
 set hidden		" バッファ移動時に変更分を自動的に隠しバッファに移動
+set nocompatible	" vi互換動作を無効
 
 " Powerline
 python from powerline.vim import setup as powerline_setup
@@ -54,7 +55,6 @@ let g:evervim_devtoken=$EVERNOTE_TOKEN
 
 " NeoBundle
 if has('vim_starting')
-  set nocompatible
   set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
 call neobundle#begin(expand('~/.vim/bundle/'))
@@ -118,3 +118,6 @@ let g:EasyMotion_grouping=1
 " カラー設定変更
 hi EasyMotionTarget ctermbg=none ctermfg=red
 hi EasyMotionShade  ctermbg=none ctermfg=blue
+
+" matchit
+runtime macros/matchit.vim
