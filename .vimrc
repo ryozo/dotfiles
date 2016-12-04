@@ -50,6 +50,12 @@ nnoremap <silent> ]b :bnext
 nnoremap <silent> [B :bfirxt
 nnoremap <silent> ]B :blast
 
+"" Visual Mode
+""" 選択範囲を*や#で検索できるようにする
+xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
+xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
+
+
 python import markdown
 let g:evervim_devtoken=$EVERNOTE_TOKEN
 
@@ -122,3 +128,11 @@ hi EasyMotionShade  ctermbg=none ctermfg=blue
 
 " matchit
 runtime macros/matchit.vim
+
+" 選択範囲を貼り付け可能に
+function! s:VSetSearch()
+  let temp = @s
+  norm! gv"sy
+  let @/ = '\V' . substitute(escape(@s, '/\'), '\n', '\\n', 'g')
+  let @s = temp
+endfunction
