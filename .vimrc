@@ -49,6 +49,8 @@ nnoremap <silent> [b :bprevious
 nnoremap <silent> ]b :bnext
 nnoremap <silent> [B :bfirxt
 nnoremap <silent> ]B :blast
+""" F5でctagsを実行
+nnoremap <f5> :!ctags -R<R>
 
 "" Visual Mode
 """ 選択範囲を*や#で検索できるようにする
