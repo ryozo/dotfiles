@@ -79,6 +79,7 @@ NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'easymotion/vim-easymotion'
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-abolish'
 
 "" NeoBundle Plugin end
 NeoBundleCheck
