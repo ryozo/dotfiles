@@ -71,10 +71,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "" NeoBundle Plugin start
 
 NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'rking/ag.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'Shougo/vimproc.vim'
 NeoBundle 'kakkyz81/evervim'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
@@ -156,3 +158,12 @@ if (exists('+colorcolumn'))
   set colorcolumn=80
   highlight ColorColumn ctermbg=9
 endif
+
+let g:unite_source_history_yank_enable = 1
+try
+  let g:unite_source_rec_async_command='ag --nocolor --nogroup -g ""'
+  call unite#filters#matcher_default#use(['matcher_fuzzy'])
+catch
+endtry
+nnoremap <space><space> :split<cr> :<C-u>Unite -start-insert file_rec/async<cr>
+:nnoremap <space>r <Plug>(unite_restart)
