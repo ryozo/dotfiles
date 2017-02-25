@@ -57,6 +57,12 @@ nnoremap <f5> :!ctags -R<R>
 xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
 xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
 
+"" Insert Mode
+imap <c-h> <Left>
+imap <c-j> <Down>
+imap <c-k> <Up>
+imap <c-l> <Right>
+
 
 python import markdown
 let g:evervim_devtoken=$EVERNOTE_TOKEN
