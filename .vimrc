@@ -62,6 +62,7 @@ imap <c-h> <Left>
 imap <c-j> <Down>
 imap <c-k> <Up>
 imap <c-l> <Right>
+imap <c-n> <Esc>o
 
 
 python import markdown
