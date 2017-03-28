@@ -49,6 +49,8 @@ nnoremap <silent> [b :bprevious
 nnoremap <silent> ]b :bnext
 nnoremap <silent> [B :bfirxt
 nnoremap <silent> ]B :blast
+nnoremap <silent> <F2> :bprevious<cr>
+nnoremap <silent> <F3> :bnext<cr>
 """ F5でctagsを実行
 nnoremap <f5> :!ctags -R<R>
 
