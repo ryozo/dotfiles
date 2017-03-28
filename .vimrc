@@ -95,6 +95,7 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-abolish'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'simeji/winresizer'
 
 "" NeoBundle Plugin end
 NeoBundleCheck
