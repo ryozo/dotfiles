@@ -53,6 +53,9 @@ nnoremap <silent> <F2> :bprevious<cr>
 nnoremap <silent> <F3> :bnext<cr>
 """ F5でctagsを実行
 nnoremap <f5> :!ctags -R<R>
+""" window分割関連
+nnoremap ss :<C-u>sp<CR>
+nnoremap sv :<C-u>vs<CR>
 
 "" Visual Mode
 """ 選択範囲を*や#で検索できるようにする
