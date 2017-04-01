@@ -15,12 +15,12 @@ alias updatedb='sudo /usr/libexec/locate.updatedb'
 alias ducks='du -cks * | sort -rn | head -11'
 
 # Customize to your needs...
-autoload -U compinit	# 補完機能
-#autoload -U predict-on	# 先行予測機能
-setopt auto_cd 		# ディレクトリ名だけでcd
-setopt auto_pushd	# cdの度にpushd
-compinit		# 補完有効
-#predict-on		# 先行予測機能
+autoload -U compinit
+#autoload -U predict-on
+setopt auto_cd
+setopt auto_pushd
+compinit
+#predict-on
 
 ## dircolors
 if [ -n "$LS_COLORS" ]; then

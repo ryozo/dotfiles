@@ -1,29 +1,29 @@
-" 表示系設定
-set number		" 行番号の表示
-set title		" ターミナルのタイトルをセット
-set cursorline		" カーソル行に背景色をつける
-set cursorcolumn	" カーソル位置のカラムの背景色を変更
-set showmatch		" 対応する括弧を強調表示
-set matchtime=5		" 対応する括弧をより素早く表示
-"set list		" 不可視文字を表示
-set ruler		" ルーラーを表示
+" Display settings
+set number		" Show line number
+set title		" Set terminal title
+set cursorline		" Add a background color to the cursor line
+set cursorcolumn	" Add a background color to the cursor column
+set showmatch		" Highlight the corresponding parentheses
+set matchtime=5		" Show corresponding parentheses quickly
+"set list		" Show invisible characters
+set ruler		" Show ruler
 
-" 検索系設定
-set hlsearch		" 検索文字列をハイライト表示
-set incsearch		" インクリメンタルサーチ
-set ignorecase		" 大小文字を区別しない
-set smartcase		" 大小文字を混在させた検索のみ大小文字を区別
-set gdefault 		" 置換時のgオプションをデフォルト有効に
+" Search settings
+set hlsearch		" Highlight search string
+set incsearch		" Enable incremental search
+set ignorecase		" Search case insensitive
+set smartcase		" Distinguish only when mixing uppper and lowercase letters
+set gdefault 		" Enable replacement 'g' option by default
 
-" その他の設定
-set autoread		" 外部でファイル変更された場合は読み直す
-set mouse=a		" マウス入力を受け付ける
-set history=10000	" コマンドラインの履歴保持
-set visualbell t_vb=	" ビープ音を無効
-set noerrorbells 	" エラー時もビープ音を無効
-set backspace=2		" Backspace定義 indent,eol,start
-set hidden		" バッファ移動時に変更分を自動的に隠しバッファに移動
-set nocompatible	" vi互換動作を無効
+" Other settings
+set autoread		" If the file has been changed externally, read it again
+set mouse=a		" Accept mouse input
+set history=10000	" Save command line history
+set visualbell t_vb=	" Disable beep
+set noerrorbells 	" Disable beep on error occasion
+set backspace=2		" Declare backspace (indent,eol,start)
+set hidden		" Move the buffer even if there are unsaved changes
+set nocompatible	" Disable vim compatible behavior
 
 " Powerline
 python from powerline.vim import setup as powerline_setup
@@ -35,34 +35,34 @@ set showtabline=2 " Always display the tabline, even if there is only one tab
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
 " Keymap
-"" CommandLine Mode
-""" コマンド履歴利用時にカーソルキーを使わず、かつ履歴フィルタを有効にする
+"" CommandLine mode
+""" Enable history filter, and don't use cursor keys when using command history
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
-""" アクティブなファイルが含まれているディレクトリを手早く展開
+""" Quickly expand directory containing active files
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 
-"" Normal Mode
-""" バッファリスト移動用 関連性があるコマンドなので[]でまとめる
+"" Normal mode
+""" Commands for moving the buffer list
 nnoremap <silent> [b :bprevious
 nnoremap <silent> ]b :bnext
 nnoremap <silent> [B :bfirxt
 nnoremap <silent> ]B :blast
 nnoremap <silent> <F2> :bprevious<cr>
 nnoremap <silent> <F3> :bnext<cr>
-""" F5でctagsを実行
+""" Execute ctags with f5
 nnoremap <f5> :!ctags -R<R>
-""" window分割関連
+""" Separate window
 nnoremap ss :<C-u>sp<CR>
 nnoremap sv :<C-u>vs<CR>
 
 "" Visual Mode
-""" 選択範囲を*や#で検索できるようにする
+""" Search selected range with '*' and '#'
 xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
 xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
 
-"" Insert Mode
+"" Insert mode
 imap <c-h> <Left>
 imap <c-j> <Down>
 imap <c-k> <Up>
@@ -80,7 +80,7 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-"" NeoBundle Plugin start
+"" NeoBundle plugin start
 
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'rking/ag.vim'
@@ -107,7 +107,7 @@ NeoBundle 'vim-scripts/bufkill.vim'
 NeoBundle 'vim-jp/cpp-vim'
 NeoBundle 'scrooloose/syntastic'
 
-"" NeoBundle Plugin end
+"" NeoBundle plugin end
 NeoBundleCheck
 call neobundle#end()
 filetype plugin indent on
@@ -134,7 +134,7 @@ colorscheme jellybeans
 "    echo 'marked' g:markrement_char[b:markrement_pos]
 "endfunction
 
-"" Markdown Firefox Preview
+"" Markdown Firefox preview
 au BufRead,BufNewFile *.md set filetype=markdown
 let g:previm_open_cmd = 'open -a Firefox'
 
@@ -145,18 +145,18 @@ endif
 
 "" EasyMotion
 let g:EasyMotion_leader_key="<Space>"
-" ホームポジションに近いキーを使う
+" Use a key close to home position
 let g:EasyMotion_keys='hjklasdfgyuiopqwertnmzxcv'
-" 1 ストローク選択を優先する
+" Prioritize stroke selection
 let g:EasyMotion_grouping=1
-" カラー設定変更
+" color settings
 hi EasyMotionTarget ctermbg=none ctermfg=red
 hi EasyMotionShade  ctermbg=none ctermfg=blue
 
 " matchit
 runtime macros/matchit.vim
 
-" 選択範囲を貼り付け可能に
+" Paste selection area
 function! s:VSetSearch()
   let temp = @s
   norm! gv"sy
@@ -164,7 +164,7 @@ function! s:VSetSearch()
   let @s = temp
 endfunction
 
-" quickfixリストから各ファイルを引数リストにコピーする
+" Copy each file from the quickfix list to the argument list
 command! -nargs=0 -bar Qargs execute 'args' QuickfixFilenames()
 function! QuickfixFilenames()
   let buffer_numbers = {}
@@ -174,7 +174,7 @@ function! QuickfixFilenames()
   return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
 endfunction
 
-" 80カラムに印を設定
+" Set up a mark on the 80th column
 if (exists('+colorcolumn'))
   set colorcolumn=80
   highlight ColorColumn ctermbg=9
