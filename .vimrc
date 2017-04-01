@@ -104,6 +104,7 @@ NeoBundle 'simeji/winresizer'
 NeoBundle 'int3/vim-extradite'
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'vim-scripts/bufkill.vim'
+NeoBundle 'vim-jp/cpp-vim'
 
 "" NeoBundle Plugin end
 NeoBundleCheck
