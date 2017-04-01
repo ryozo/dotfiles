@@ -105,6 +105,7 @@ NeoBundle 'int3/vim-extradite'
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'vim-scripts/bufkill.vim'
 NeoBundle 'vim-jp/cpp-vim'
+NeoBundle 'scrooloose/syntastic'
 
 "" NeoBundle Plugin end
 NeoBundleCheck
@@ -187,3 +188,13 @@ catch
 endtry
 nnoremap <space><space> :split<cr> :<C-u>Unite -start-insert file_rec/async<cr>
 :nnoremap <space>r <Plug>(unite_restart)
+
+" Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = { "mode": "passive", "active_filetypes": ["h", "c", "hpp", "cpp"], "passive_filetypes": [] }
