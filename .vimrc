@@ -96,9 +96,12 @@ NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'easymotion/vim-easymotion'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'tpope/vim-abolish'
+NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'simeji/winresizer'
+NeoBundle 'int3/vim-extradite'
+NeoBundle 'gregsexton/gitv'
 
 "" NeoBundle Plugin end
 NeoBundleCheck
