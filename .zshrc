@@ -22,7 +22,7 @@ setopt auto_pushd
 compinit
 #predict-on
 
-## dircolors
+# dircolors
 if [ -n "$LS_COLORS" ]; then
     zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 fi
@@ -34,27 +34,27 @@ if [ -f ~/.dircolors ]; then
     fi
 fi
 
-## powerline
+# powerline
 powerline-daemon -q
 . ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 
-## sdkman(gvm)
+# sdkman(gvm)
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-## Source-highlight
+# Source-highlight
 export LESS='-R'
 export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 
-## PATH
+# PATH
 export PATH=$PATH:/opt/maven/bin
 export PATH=$PATH:/opt/activator-dist/bin
 export PATH=$PATH:~/Library/Python/2.7/bin
 
-## CDPATH
+# CDPATH
 export CDPATH=.:~
 
-## zplug
+# zplug
 source ~/.zplug/init.zsh
 
 zplug "zsh-users/zsh-syntax-highlighting"

@@ -116,7 +116,7 @@ set t_Co=256
 syntax on
 colorscheme jellybeans
 
-"" Mark settings
+" Mark settings
 "if !exists('g:markrement_char')
 "    let g:markrement_char = [
 "    \     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
@@ -134,22 +134,22 @@ colorscheme jellybeans
 "    echo 'marked' g:markrement_char[b:markrement_pos]
 "endfunction
 
-"" Markdown Firefox preview
+" Markdown Firefox preview
 au BufRead,BufNewFile *.md set filetype=markdown
 let g:previm_open_cmd = 'open -a Firefox'
 
-"" Neocomplete vim settings
+" Neocomplete vim settings
 if filereadable(expand('~/.neocomplete'))
     source ~/.neocomplete
 endif
 
-"" EasyMotion
+" EasyMotion
 let g:EasyMotion_leader_key="<Space>"
-" Use a key close to home position
+"" Use a key close to home position
 let g:EasyMotion_keys='hjklasdfgyuiopqwertnmzxcv'
-" Prioritize stroke selection
+"" Prioritize stroke selection
 let g:EasyMotion_grouping=1
-" color settings
+"" color settings
 hi EasyMotionTarget ctermbg=none ctermfg=red
 hi EasyMotionShade  ctermbg=none ctermfg=blue
 
