@@ -106,6 +106,7 @@ NeoBundle 'gregsexton/gitv'
 NeoBundle 'vim-scripts/bufkill.vim'
 NeoBundle 'vim-jp/cpp-vim'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'mileszs/ack.vim'
 
 "" NeoBundle plugin end
 NeoBundleCheck
