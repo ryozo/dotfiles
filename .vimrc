@@ -56,11 +56,15 @@ nnoremap <f5> :!ctags -R<R>
 """ Separate window
 nnoremap ss :<C-u>sp<CR>
 nnoremap sv :<C-u>vs<CR>
+""" Toggle comment
+nmap <Leader>c <Plug>(caw:i:toggle)
 
 "" Visual Mode
 """ Search selected range with '*' and '#'
 xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
 xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
+""" Toggle comment
+xmap <Leader>c <Plug>(caw:i:toggle)
 
 "" Insert mode
 imap <c-h> <Left>
@@ -107,6 +111,7 @@ NeoBundle 'vim-scripts/bufkill.vim'
 NeoBundle 'vim-jp/cpp-vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'mileszs/ack.vim'
+NeoBundle 'tyru/caw.vim'
 
 "" NeoBundle plugin end
 NeoBundleCheck
