@@ -61,6 +61,10 @@ nnoremap ss :<C-u>sp<CR>
 nnoremap sv :<C-u>vs<CR>
 """ Toggle comment
 nmap <Leader>c <Plug>(caw:i:toggle)
+""" Quick highlight
+nmap <Leader>m <Plug>(quickhl-manual-this)
+nmap <Leader>M <Plug>(quickhl-manual-reset)
+nmap <Leader>j <Plug>(quickhl-cword-toggle)
 
 "" Visual Mode
 """ Search selected range with '*' and '#'
@@ -68,6 +72,9 @@ xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
 xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
 """ Toggle comment
 xmap <Leader>c <Plug>(caw:i:toggle)
+""" Quick highlight
+xmap <Leader>m <Plug>(quickhl-manual-this)
+xmap <Leader>M <Plug>(quickhl-manual-reset)
 
 "" Insert mode
 imap <c-h> <Left>
@@ -115,6 +122,7 @@ NeoBundle 'vim-jp/cpp-vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'tyru/caw.vim'
+NeoBundle 't9md/vim-quickhl'
 
 "" NeoBundle plugin end
 NeoBundleCheck
