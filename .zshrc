@@ -54,6 +54,24 @@ export PATH=$PATH:~/Library/Python/2.7/bin
 # CDPATH
 export CDPATH=.:~
 
+# peco history search
+function peco-history-selection() {
+    local _cmd
+    case ${OSTYPE} in
+        darwin*)
+	    _cmd='tail -r'
+	    ;;
+	linux*)
+            _cmd='tac'
+	    ;;
+    esac
+    BUFFER=`history -n 1 | $_cmd | awk '!a[$0]++' | peco`
+    CURSOR=$#BUFFER
+    zle reset-prompt
+}
+zle -N peco-history-selection
+bindkey '^R' peco-history-selection
+
 # zplug
 source ~/.zplug/init.zsh
 
