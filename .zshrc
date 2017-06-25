@@ -79,7 +79,7 @@ zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-history-substring-search"
 zplug "k4rthik/git-cal", as:command, frozen:1
 zplug "tj/n", hook-build:"make install"
-zplug "b4b4r07/enhancd", at:v1
+zplug "b4b4r07/enhancd", use:init.sh
 zplug "mollifier/anyframe", at:4c23cb60
 
 if ! zplug check --verbose; then
