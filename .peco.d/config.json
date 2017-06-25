@@ -5,6 +5,7 @@
 		"C-f": "peco.ScrollPageDown",
 		"C-d": "peco.ScrollPageDown",
 		"C-b": "peco.ScrollPageUp",
-		"C-u": "peco.ScrollPageUp"
+		"C-u": "peco.ScrollPageUp",
+		"C-e": "peco.Finish"
 	}
 }
