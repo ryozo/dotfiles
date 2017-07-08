@@ -7,5 +7,9 @@
 		"C-b": "peco.ScrollPageUp",
 		"C-u": "peco.ScrollPageUp",
 		"C-e": "peco.Finish"
+	},
+	"Style": {
+		"Selected": ["underline", "on_cyan", "black"],
+		"Matched":  ["red", "on_blue"]
 	}
 }
