@@ -1,0 +1,6 @@
+# show commit ID in main view
+set main-view = id date author:email-user commit-title:graph=yes,refs=yes
+
+# execute rebase -i with the selected commit ID with R key
+bind main    R !git rebase -i %(commit)
+bind fiff    R !git rebase -i %(commit)
