@@ -35,8 +35,20 @@ if [ -f ~/.dircolors ]; then
 fi
 
 # powerline
+function load-powerline() {
+    local _plhome
+    case ${OSTYPE} in
+        darwin*)
+	    _plhome='~/Library/Python/2.7/lib/python/site-packages/powerline'
+	    ;;
+	linux*)
+            _plhome='/usr/lib/python2.7/site-packages/powerline'
+	    ;;
+    esac
+    . ${_plhome}/bindings/zsh/powerline.zsh
+}
 powerline-daemon -q
-. ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+load-powerline
 
 # sdkman(gvm)
 export SDKMAN_DIR="$HOME/.sdkman"
