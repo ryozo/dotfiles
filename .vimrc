@@ -24,6 +24,7 @@ set noerrorbells 	" Disable beep on error occasion
 set backspace=2		" Declare backspace (indent,eol,start)
 set hidden		" Move the buffer even if there are unsaved changes
 set nocompatible	" Disable vim compatible behavior
+set shiftwidth=4	" Width displaced by automatic indentation
 
 " Powerline
 python from powerline.vim import setup as powerline_setup
