@@ -66,6 +66,11 @@ nmap <Leader>c <Plug>(caw:i:toggle)
 nmap <Leader>m <Plug>(quickhl-manual-this)
 nmap <Leader>M <Plug>(quickhl-manual-reset)
 nmap <Leader>j <Plug>(quickhl-cword-toggle)
+""" Key mapping similar to intellij idea
+nmap <ESC><Left> <M-Left>
+nmap <ESC><Right> <M-Right>
+nnoremap <M-Left> <C-o>
+nnoremap <M-Right> <C-i>
 
 "" Visual Mode
 """ Search selected range with '*' and '#'
@@ -83,7 +88,6 @@ imap <c-j> <Down>
 imap <c-k> <Up>
 imap <c-l> <Right>
 imap <c-n> <Esc>o
-
 
 python import markdown
 let g:evervim_devtoken=$EVERNOTE_TOKEN
