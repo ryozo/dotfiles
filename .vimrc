@@ -71,6 +71,7 @@ nmap <ESC><Left> <M-Left>
 nmap <ESC><Right> <M-Right>
 nnoremap <M-Left> <C-o>
 nnoremap <M-Right> <C-i>
+nnoremap <C-b> <C-]>
 
 "" Visual Mode
 """ Search selected range with '*' and '#'
