@@ -56,7 +56,7 @@ nnoremap <silent> ]B :blast
 nnoremap <silent> <F2> :bprevious<cr>
 nnoremap <silent> <F3> :bnext<cr>
 """ Execute ctags with f5
-nnoremap <f5> :!ctags -R<R>
+nnoremap <f5> :!ctags -R<CR>
 """ Separate window
 nnoremap ss :<C-u>sp<CR>
 nnoremap sv :<C-u>vs<CR>
