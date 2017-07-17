@@ -129,6 +129,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'tyru/caw.vim'
 NeoBundle 't9md/vim-quickhl'
+NeoBundle 'idanarye/vim-vebugger'
 
 "" NeoBundle plugin end
 NeoBundleCheck
