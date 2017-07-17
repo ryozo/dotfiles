@@ -8,6 +8,16 @@ set matchtime=5		" Show corresponding parentheses quickly
 "set list		" Show invisible characters
 set ruler		" Show ruler
 
+" GVim settings
+set guioptions-=m	" Hide the menu bar in the GVim
+set guioptions-=T	" Hide the tool bar in the GVim
+set guioptions-=r	" Hide the right scroll bar in the GVim
+set guioptions-=R	" Hide the right scroll bar in the GVim
+set guioptions-=l	" Hide the left  scroll bar in the GVim
+set guioptions-=L	" Hide the left  scroll bar in the GVim
+set guioptions-=b	" Hide the horizontal scroll bar in the GVim
+set guifont=Ricty\ Diminished\ for\ Powerline\ Regular\ 10	" GUI font and size
+
 " Search settings
 set hlsearch		" Highlight search string
 set incsearch		" Enable incremental search
