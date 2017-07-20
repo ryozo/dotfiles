@@ -35,6 +35,13 @@ set laststatus=2 " Always display the statusline in all windows
 set showtabline=2 " Always display the tabline, even if there is only one tab
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
+" Setting up autocmd
+augroup vimrc_loading
+  autocmd!
+  autocmd BufRead *.c let b:compiler = 'gcc'
+  autocmd BufRead *.cpp let b:compiler = 'g++'
+augroup END
+
 " Leader key
 let mapleader = "\<Space>"
 
@@ -72,7 +79,9 @@ nmap <ESC><Right> <M-Right>
 nnoremap <M-Left> <C-o>
 nnoremap <M-Right> <C-i>
 nnoremap <C-b> <C-]>
-""" Define debugging settings with keybindings similar to idea
+""" Define code exec and debugging settings with keybindings similar to idea
+nnoremap <expr> <S-F9> ":w <CR> :!".b:compiler." -g -Wall % -o %< <CR> :VBGstartGDB %< <CR>"
+nnoremap <expr> <S-F10> ":w <CR> :!".b:compiler." -g -Wall % -o %< && ./%< <CR>"
 nnoremap <F7> :VBGstepIn<CR>
 nnoremap <F8> :VBGstepOver<CR>
 nnoremap <F9> :VBGcontinue<CR>
