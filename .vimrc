@@ -72,6 +72,13 @@ nmap <ESC><Right> <M-Right>
 nnoremap <M-Left> <C-o>
 nnoremap <M-Right> <C-i>
 nnoremap <C-b> <C-]>
+""" Define debugging settings with keybindings similar to idea
+nnoremap <F7> :VBGstepIn<CR>
+nnoremap <F8> :VBGstepOver<CR>
+nnoremap <F9> :VBGcontinue<CR>
+nnoremap <S-F8> :VBGstepOut<CR>
+nnoremap <C-d> :VBGtoggleBreakpointThisLine<CR>
+nnoremap <C-F8> :VBGtoggleBreakpointThisLine<CR>
 
 "" Visual Mode
 """ Search selected range with '*' and '#'
