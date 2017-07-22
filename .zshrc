@@ -39,10 +39,10 @@ function load-powerline() {
     local _plhome
     case ${OSTYPE} in
         darwin*)
-	    _plhome='~/Library/Python/2.7/lib/python/site-packages/powerline'
+	    _plhome="${HOME}/Library/Python/2.7/lib/python/site-packages/powerline"
 	    ;;
 	linux*)
-            _plhome='/usr/lib/python2.7/site-packages/powerline'
+            _plhome="/usr/lib/python2.7/site-packages/powerline"
 	    ;;
     esac
     . ${_plhome}/bindings/zsh/powerline.zsh
