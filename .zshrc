@@ -34,6 +34,9 @@ if [ -f ~/.dircolors ]; then
     fi
 fi
 
+# Terminal
+export TERM="xterm-256color"
+
 # sdkman(gvm)
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
