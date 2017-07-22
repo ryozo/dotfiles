@@ -34,22 +34,6 @@ if [ -f ~/.dircolors ]; then
     fi
 fi
 
-# powerline
-function load-powerline() {
-    local _plhome
-    case ${OSTYPE} in
-        darwin*)
-	    _plhome="${HOME}/Library/Python/2.7/lib/python/site-packages/powerline"
-	    ;;
-	linux*)
-            _plhome="/usr/lib/python2.7/site-packages/powerline"
-	    ;;
-    esac
-    . ${_plhome}/bindings/zsh/powerline.zsh
-}
-powerline-daemon -q
-load-powerline
-
 # sdkman(gvm)
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -65,6 +49,22 @@ export PATH=$PATH:~/Library/Python/2.7/bin
 
 # CDPATH
 export CDPATH=.:~
+
+# powerline
+function load-powerline() {
+    local _plhome
+    case ${OSTYPE} in
+        darwin*)
+	    _plhome="${HOME}/Library/Python/2.7/lib/python/site-packages/powerline"
+	    ;;
+	linux*)
+            _plhome="/usr/lib/python2.7/site-packages/powerline"
+	    ;;
+    esac
+    . ${_plhome}/bindings/zsh/powerline.zsh
+}
+powerline-daemon -q
+load-powerline
 
 # peco history search
 function peco-history-selection() {
