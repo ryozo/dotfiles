@@ -53,6 +53,9 @@ export PATH=$PATH:~/Library/Python/2.7/bin
 # CDPATH
 export CDPATH=.:~
 
+# zsh-autosuggestins plugin color setting
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
+
 # powerline
 function load-powerline() {
     local _plhome
@@ -92,6 +95,7 @@ source ~/.zplug/init.zsh
 
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-autosuggestions", use:zsh-autosuggestions.zsh
 zplug "k4rthik/git-cal", as:command, frozen:1
 zplug "tj/n", hook-build:"make install"
 zplug "b4b4r07/enhancd", use:init.sh
