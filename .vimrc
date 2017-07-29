@@ -98,6 +98,8 @@ nnoremap <F9> :VBGcontinue<CR>
 nnoremap <S-F8> :VBGstepOut<CR>
 nnoremap <C-d> :VBGtoggleBreakpointThisLine<CR>
 nnoremap <C-F8> :VBGtoggleBreakpointThisLine<CR>
+""" Define auto format keybinding
+nnoremap <Leader><F3> :Autoformat<CR>
 
 "" Visual Mode
 """ Search selected range with '*' and '#'
@@ -156,6 +158,7 @@ NeoBundle 'mileszs/ack.vim'
 NeoBundle 'tyru/caw.vim'
 NeoBundle 't9md/vim-quickhl'
 NeoBundle 'idanarye/vim-vebugger'
+NeoBundle 'Chiel92/vim-autoformat'
 
 "" NeoBundle plugin end
 NeoBundleCheck
