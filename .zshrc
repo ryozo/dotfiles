@@ -109,3 +109,8 @@ if ! zplug check --verbose; then
 fi
 
 zplug load
+
+# If AWS command line tools are enabled, source the CLI completer.
+if [[ -f /usr/bin/aws_zsh_completer.sh ]]; then
+    source /usr/bin/aws_zsh_completer.sh
+fi
