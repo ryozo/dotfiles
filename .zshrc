@@ -88,7 +88,6 @@ function peco-history-selection() {
     zle reset-prompt
 }
 zle -N peco-history-selection
-bindkey '^R' peco-history-selection
 
 # zplug
 source ~/.zplug/init.zsh
@@ -114,3 +113,6 @@ zplug load
 if [[ -f /usr/bin/aws_zsh_completer.sh ]]; then
     source /usr/bin/aws_zsh_completer.sh
 fi
+
+# Key bindings
+bindkey '^R' peco-history-selection	# Call history search using peco
