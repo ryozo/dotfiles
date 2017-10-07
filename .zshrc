@@ -116,3 +116,5 @@ fi
 
 # Key bindings
 bindkey '^R' peco-history-selection	# Call history search using peco
+bindkey '^K' up-line-or-history		# Move history up like vim
+bindkey '^J' down-line-or-history	# Move hisotry down like vim
