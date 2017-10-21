@@ -35,6 +35,8 @@ set backspace=2		" Declare backspace (indent,eol,start)
 set hidden		" Move the buffer even if there are unsaved changes
 set nocompatible	" Disable vim compatible behavior
 set shiftwidth=4	" Width displaced by automatic indentation
+set spell		" Enable vim's spelling checker
+set spelllang=en,cjk	" Exclude errors in JP, with spelling checker in English
 
 " Powerline
 python from powerline.vim import setup as powerline_setup
@@ -50,6 +52,7 @@ augroup vimrc_loading
   autocmd!
   autocmd BufRead *.c let b:compiler = 'gcc'
   autocmd BufRead *.cpp let b:compiler = 'g++'
+  autocmd BufReadPost,BufNewFile,Syntax * call s:SpellConf()
 augroup END
 
 " Leader key
@@ -252,3 +255,21 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { "mode": "passive", "active_filetypes": ["h", "c", "hpp", "cpp"], "passive_filetypes": [] }
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
+
+" Programmable words such as snake/camel case are excluded from spell check
+" Referred to https://qiita.com/crispy/items/9a49d7dc792740f062ab
+function! s:SpellConf()
+  redir! => syntax
+  silent syntax
+  redir END
+
+  if syntax =~? '/<comment\>'
+    syntax spell default
+    syntax match SpellMaybeCode /\<\h\l*[_A-Z]\h\{-}\>/ contains=@NoSpell transparent containedin=Comment contained
+  else
+    syntax spell toplevel
+    syntax match SpellMaybeCode /\<\h\l*[_A-Z]\h\{-}\>/ contains=@NoSpell transparent
+  endif
+
+  syntax cluster Spell add=SpellNotAscii,SpellMaybeCode
+endfunction
