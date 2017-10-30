@@ -1,0 +1,31 @@
+"===[ Settings ]=====================================================
+set complete=l
+set noerrorbells
+set visualbell
+set noerrorbells
+set ignorecase
+set smartcase
+set defsearch=google
+set hintchars=ifjklasdhguonmerwc
+
+"===[ Mappings ]=====================================================
+map R :source ~/.vimperatorrc<CR>
+map h <A-Left>
+map l <A-Right>
+map H <Left>
+map L <Right>
+map <C-h> <C-PageUp>
+map <C-l> <C-PageDown>
+map <C-r> :restart<CR>
+map y :echo 'Yank!'<CR>Y
+
+nnoremap i f
+nnoremap I F
+nnoremap B :bmarks
+nnoremap <C-p> :bmarks
+nnoremap s :tabopen<Space>google<Space>
+nnoremap j 3j
+nnoremap k 3k
+
+vmap S <C-c><Esc><Esc>:tabopen<Space>google<Space><C-v><CR>
+vmap <silent> <C-g> y<Esc><Esc>P
