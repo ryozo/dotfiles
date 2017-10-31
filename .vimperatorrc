@@ -1,4 +1,5 @@
 "===[ Settings ]=====================================================
+set titlestring=Firefox
 set complete=l
 set noerrorbells
 set visualbell
