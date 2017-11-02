@@ -80,7 +80,8 @@ function peco-history-selection() {
             _cmd='tac'
 	    ;;
     esac
-    BUFFER=`history -n 1 | bash -c "$_cmd" | awk '!a[$0]++' | peco --layout=bottom-up`
+    BUFFER=`history -n 1 | bash -c "$_cmd" | awk '!a[$0]++' |\
+        peco --layout=bottom-up --initial-filter SmartCase`
     CURSOR=$#BUFFER
     zle reset-prompt
 }
