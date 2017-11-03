@@ -19,6 +19,7 @@ map <C-h> <C-PageUp>
 map <C-l> <C-PageDown>
 map <C-r> :restart<CR>
 map y :echo 'Yank!'<CR>Y
+map o :open 
 
 nnoremap i f
 nnoremap I F
