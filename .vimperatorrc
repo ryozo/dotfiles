@@ -31,3 +31,39 @@ nnoremap k 3k
 
 vmap S <C-c><Esc><Esc>:tabopen<Space>google<Space><C-v><CR>
 vmap <silent> <C-g> y<Esc><Esc>P
+
+"===[ Highlights ]=====================================================
+"" Reffered to http://blog.ruedap.com/2010/08/01/vimperator-hint-font-size
+"" Reffered to http://blog.ruedap.com/2010/08/13/vimperator-completion-fontsize
+
+"" font setting of hint displayed by 'f'
+hi Hint z-index:5000; font-family:Menlo; font-size:14px; color:white; background-color:red; border-color:ButtonShadow; border-width:0px; border-style:solid; padding:0px 2px 0px 2px; position:absolute;
+
+"" size up the font size of status bar
+style chrome://* <<EOM
+#liberator-statusline {
+    font-family: Menlo, Consolas, Monaco, monospace !important;
+    font-weight: normal !important;
+    font-size: 10pt !important;
+    padding:2px 2px !important;
+}
+EOM
+"" status bar settings
+hi StatusLine color: #000; background: #BBB; font-weight: normal; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace;
+
+"" command line settings
+hi CmdLine color: #000; background: #FFF; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; padding: 2px;
+hi Normal color: #000; background: #FFF; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; " normal text
+hi InfoMsg color: #000; background: #FFF; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; " informed message
+hi ModeMsg color: #000; background: #FFF; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; " mode
+hi MoreMsg color: #000; background: #FFF; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; " mode
+hi ErrorMsg color: #FFF; background: #F00; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; " error message
+hi LineNr color: #F00; background: #FFF; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; " line number of error message
+
+"" completion list settings
+hi CompTitle font-weight: bold; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; " title
+hi CompResult width: 45%; overflow: hidden; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; " result info (left side)
+hi CompDesc width: 50%; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; " area of explanation (right side)
+hi CompItem font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; " completion item
+hi CompItem[selected] color: #FFF; background: #000; font-weight: normal; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; " selected completion line
+hi Filter color: #06E; font-weight: bold; " matched text of completion list
