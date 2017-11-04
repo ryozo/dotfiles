@@ -1,3 +1,7 @@
+--sort-files
+--context=1
+--follow
+
 --ignore-dir=.idea/
 --ignore-dir=node_modules/
 --ignore-dir=bower_components/
