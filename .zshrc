@@ -10,6 +10,7 @@ fi
 # Alias
 alias updatedb='sudo /usr/libexec/locate.updatedb'
 alias ducks='du -cks * | sort -rn | head -11'
+alias l='ll'
 
 # Customize to your needs...
 autoload -U compinit
