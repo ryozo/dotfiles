@@ -5,3 +5,4 @@ map <c-l> nextTab
 map i LinkHints.activateMode
 map I LinkHints.activateModeToOpenInNewTab
 map d removeTab
+map d restoreTab
