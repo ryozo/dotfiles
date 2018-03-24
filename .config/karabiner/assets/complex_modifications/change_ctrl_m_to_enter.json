@@ -1,0 +1,33 @@
+{
+  "title": "Vi Mode, left_control + m. shift/option/command + arrow working.",
+  "rules": [
+    {
+      "description": "Vi Mode [left_control + m]",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "m",
+            "modifiers": {
+              "mandatory": [
+                "control"
+              ],
+              "optional": [
+                "caps_lock",
+                "command",
+                "option",
+                "shift",
+                "fn"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "return_or_enter"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
