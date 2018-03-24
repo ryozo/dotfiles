@@ -134,6 +134,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "" NeoBundle plugin start
 
 NeoBundle 'nanotech/jellybeans.vim'
+NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neosnippet.vim'
@@ -169,8 +170,9 @@ call neobundle#end()
 filetype plugin indent on
 
 set t_Co=256
+set background=dark
 syntax on
-colorscheme jellybeans
+colorscheme hybrid
 
 " Mark settings
 "if !exists('g:markrement_char')
