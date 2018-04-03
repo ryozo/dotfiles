@@ -25,7 +25,16 @@
               "key_code": "return_or_enter"
             }
           ],
-          "type": "basic"
+          "type": "basic",
+	  "conditions": [
+	      {
+		  "type": "frontmost_application_unless",
+		  "bundle_identifiers": [
+		      "^com\\.apple\\.Terminal$",
+		      "^com\\.googlecode\\.iterm2$"
+		  ]
+	      }
+	  ]
         }
       ]
     }
