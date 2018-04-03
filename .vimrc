@@ -275,3 +275,6 @@ function! s:SpellConf()
 
   syntax cluster Spell add=SpellNotAscii,SpellMaybeCode
 endfunction
+
+" CtrlP vim settings
+let g:ctrlp_show_hidden = 1
