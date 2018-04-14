@@ -32,6 +32,9 @@ if [ -f ~/.dircolors ]; then
     fi
 fi
 
+# Locale
+export LC_ALL=en_US.utf-8
+
 # Terminal
 export TERM="xterm-256color"
 
